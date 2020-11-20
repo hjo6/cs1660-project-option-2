@@ -1,0 +1,4 @@
+1. open terminal, move to project folder, run command 'xterm'
+2. export DISPLAY=192.168.1.156:0
+3. xhost + ${hostname}
+4. docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro hjosterhoudt/cs1660-project-option-2
