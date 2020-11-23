@@ -27,7 +27,15 @@ My guidelines are, again, under the assumption that the user is using an Apple m
 - Enter the following command, using your IP address in place of the brackets: "export DISPLAY=[IP Address]:0" (**for Windows**, try using "set-variable -name DISPLAY -value [IP address]:0.0". If the tutorial provided on Xming is correct, you can skip the next step)
 - Enter the following command as written: "xhost + ${hostname}" (**Windows users** can likely skip this step [explanation given in above bullet point])
 - Again, ensure you are in the proper directory to run the image. Enter the following command, as written, to build the image: "docker build --tag cs1660-project-option-2 ."
-- Enter the following command as written: "docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro hjosterhoudt/cs1660-project-option-2"
+- Enter the following command as written: "docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro cs1660-project-option-2"
+
+### Interacting with the GUI
+The first thing you see when the GUI loads is a window that says "hjo6 Search Engine" in the top left of the window, a message that says "Click the Construct Inverted Indices button below to begin," and a button that says "Construct Inverted Indices."
+**Note** Whenever the buttons are clicked, the window will "freeze" because it's waiting for a response from the GCP Cluster.
+Upon clicking the Construct Inverted Indices button, the program will connect to the GCP cluster, where the input files are already stored, and will submit a job to construct the indices. If the construction was successful, the window will change; if not, you'll remain on the construct inverted indices page.
+The "new" window will have 2 search fields and 2 buttons, with a large display underneath.
+The first search field has a label that says "Search for a term." Enter a term in the field and press submit; the program will build a job request and send the search term to the GCP cluster to search through the inverted indices.
+The second search field has a label that says "Top N Results." Enter a **number** into the field and press submit; the program will build a job request and send the number to the GCP cluster to determine the Top N Results.
 
 ## Code Walkthrough with Demonstration of Applications
 The link to the video (hosted on OneDrive) can be found [here.](https://pitt-my.sharepoint.com/:v:/g/personal/hjo6_pitt_edu/EVUjH0GqBBFLosVXmDev4ioB00D8psLpQ9LPkfKg9-to9g?e=xZfkEc) Demonstration begins at timestamp 28:20. The video audio kind of cuts a bit of the intro off, but all the relevant information is still in tact. At timestamp 32:15, I had received a violation from Google and my project was temporarily taken down. I'm not sure whether this means my project/cluster will be accessible, but I wanted to make the reader aware of this possible issue.
