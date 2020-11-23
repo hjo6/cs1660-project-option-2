@@ -21,7 +21,7 @@ In this repo, there are four folders containing very important files!
 My guidelines are, again, under the assumption that the user is using an Apple machine. However, the steps should remain the same, if my understanding is correct.
 - Have a terminal that can run the image open (XQuartz for Mac, Xming for Windows)
 - Ensure that if you pulled the entire GitHub repository, you are located inside of the "projectGUI" folder
-- Enter the following command, using your IP address in place of the brackets: "export DISPLAY=[IP Address]"
+- Enter the following command, using your IP address in place of the brackets: "export DISPLAY=[IP Address]:0" (for windows, try using "set-variable -name DISPLAY -value [IP address]:0.0"
 - Enter the following command as written: "xhost + ${hostname}"
 - Enter the following command as written: "docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro hjosterhoudt/cs1660-project-option-2"
 
