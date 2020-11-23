@@ -18,11 +18,11 @@ In this repo, there are four folders containing very important files!
 - The user knows their IP address.
 
 ### How to Run
-My guidelines are, again, under the assumption that the user is using an Apple machine. However, the steps should remain the same, if my understanding is correct.
+My guidelines are, again, under the assumption that the user is using an Apple machine. However, I have included possible steps for Windows users, in parantheses following the initial step. Windows is emboldened **like this** to help the user find the step
 - Have a terminal that can run the image open (XQuartz for Mac, Xming for Windows)
 - Ensure that if you pulled the entire GitHub repository, you are located inside of the "projectGUI" folder
-- Enter the following command, using your IP address in place of the brackets: "export DISPLAY=[IP Address]:0" (for Windows, try using "set-variable -name DISPLAY -value [IP address]:0.0". If the tutorial on Xming is correct, you can skip the next step)
-- Enter the following command as written: "xhost + ${hostname}" (Windows users can likely skip this step [explanation given in above bullet point])
+- Enter the following command, using your IP address in place of the brackets: "export DISPLAY=[IP Address]:0" (**for Windows**, try using "set-variable -name DISPLAY -value [IP address]:0.0". If the tutorial on Xming is correct, you can skip the next step)
+- Enter the following command as written: "xhost + ${hostname}" (**Windows users** can likely skip this step [explanation given in above bullet point])
 - Enter the following command as written: "docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro hjosterhoudt/cs1660-project-option-2"
 
 ## Code Walkthrough with Demonstration of Applications
