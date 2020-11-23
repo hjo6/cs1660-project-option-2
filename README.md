@@ -16,7 +16,7 @@ In this repo, there are four folders containing very important files!
 - Docker is installed and running on the machine.
 - I'm using XQuartz to enable the GUI support on my machine; for Windows, it's assumed the user is using Xming and has it set up properly.
     - Find the XQuartz tutorial [here](https://www.turgaykivrak.com/posts/docker-run-gui-app/).
-    - Find the Xming tutorial [here](https://docs.microsoft.com/en-us/archive/blogs/jamiedalton/windows-10-docker-gui). (**Note**, after reading the brief Xming tutorial, **Windows users** make sure to add **your** IP Address to the c:\Program Files (x86)\Xming\x0.hosts file. This is the only step for Windows I had previously not provided)
+    - Find the Xming tutorial [here](https://docs.microsoft.com/en-us/archive/blogs/jamiedalton/windows-10-docker-gui). (**Note**, after reading the brief Xming tutorial, **Windows users** make sure to add **your** IP Address to the c:\Program Files (x86)\Xming\x0.hosts file. This is the only step for Windows I had previously not provided. Check provided link for details).
 - The user knows their IP address.
 
 ### How to Run
