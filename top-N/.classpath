@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="/Users/hunterosterhoudt/Desktop/School/CS1660/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/hunterosterhoudt/Desktop/School/CS1660/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/hunterosterhoudt/Desktop/School/CS1660/hadoop-mapreduce-client-core-2.6.0-cdh5.15.1.jar"/>
+	<classpathentry kind="lib" path="/Users/hunterosterhoudt/Desktop/School/CS1660/hadoop-common-2.6.0-cdh5.15.1.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
