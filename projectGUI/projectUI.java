@@ -27,22 +27,22 @@ public class projectUI extends javax.swing.JFrame {
     // Have to get credential json file from GCP IAM. Once downloaded, put its
     // location in this string
     String credentials = "/app/option2gui-5165b0dc8128.json";
-    
+
     // The name of the cluster you want to submit the job to
     String clusterName = "final-project";
-    
+
     // The project id of the GCP project
     String projectId = "option2gui";
-    
+
     // Region where the cluster is located
     String region = "us-east1";
-    
+
     // The name of the bucket where jar file and arg files are located
     String bucketName = "dataproc-staging-us-east1-284206552440-wehqqljx";
-    
+
     // set your end point using the region variable
     String endpoint = String.format("%s-dataproc.googleapis.com:443", region);
-    
+
     /**
      * Creates new form projectUI
      */
@@ -223,7 +223,7 @@ public class projectUI extends javax.swing.JFrame {
             .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
 
             // Verify that credentials were accepted
-            //System.out.println("Google Credentials set!");
+            System.out.println("Google Credentials set!");
 
             // This authenticates your credentials to use storage. Storage is
             // used to access any files stored in the bucket in the cluster
@@ -233,7 +233,7 @@ public class projectUI extends javax.swing.JFrame {
             .getService();
 
             // Verify that storage credentials were accepted
-            //System.out.println("Storage Credentials accepted!");
+            System.out.println("Storage Credentials accepted!");
 
             // Configure JobControllerSettings to customize credentials. This
             // allows you to access the cluster
@@ -309,8 +309,8 @@ public class projectUI extends javax.swing.JFrame {
             //System.out.println(contentString);
 
             if (contentString.isEmpty()){
-                
-            } else { 
+
+            } else {
                 jPanel2.setVisible(false);
                 jPanel1.setVisible(true);
                 searchButton.setVisible(true);
@@ -322,7 +322,7 @@ public class projectUI extends javax.swing.JFrame {
                 searchLabel.setVisible(true);
                 topNlabel.setVisible(true);
                 title1.setText("Inverted Indices constructed successfully!");
-                title2.setText("Please choose one of the actions below to perform."); 
+                title2.setText("Please choose one of the actions below to perform.");
             }
                 /*
             // Variable to test if deletion was successful
@@ -341,8 +341,8 @@ public class projectUI extends javax.swing.JFrame {
                 }
             } */
         } catch (Exception e){
-            System.out.println("Error! Exception: " + e); 
-        } 
+            System.out.println("Error! Exception: " + e);
+        }
     }//GEN-LAST:event_invertIndicesBtnActionPerformed
 
     private void searchTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextActionPerformed
@@ -353,7 +353,7 @@ public class projectUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         String term = searchText.getText();
         if (term.isEmpty()){
-            
+
         } else {
             result.setText("Beginning search for the term " + term + " ...");
             searchText.setText("");
@@ -459,8 +459,8 @@ public class projectUI extends javax.swing.JFrame {
 
 
             } catch (Exception e){
-                System.out.println("Error! Exception: " + e); 
-            } 
+                System.out.println("Error! Exception: " + e);
+            }
         }
     }//GEN-LAST:event_searchButtonActionPerformed
 
@@ -571,11 +571,11 @@ public class projectUI extends javax.swing.JFrame {
                         System.out.println("Error deleting blob.");
                     }
                 }
-                
+
 
             } catch (Exception e){
-                System.out.println("Error! Exception: " + e); 
-            } 
+                System.out.println("Error! Exception: " + e);
+            }
         }
     }//GEN-LAST:event_topNButtonActionPerformed
 
@@ -586,7 +586,7 @@ public class projectUI extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

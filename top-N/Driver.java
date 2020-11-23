@@ -30,14 +30,12 @@ public class Driver {
 		job.setMapperClass(TopNMapper.class);
 		job.setReducerClass(TopNReducer.class);
 
-		// Why switch the classes for output key class and output value class?
 		job.setMapOutputKeyClass(LongWritable.class);
 		job.setMapOutputValueClass(Text.class);
 
 		job.setOutputKeyClass(LongWritable.class);
 		job.setOutputValueClass(Text.class);
 
-		// Results in a single output file
 		job.setNumReduceTasks(1);
 
 		FileInputFormat.setInputPaths(job, new Path(otherArgs[1]));
