@@ -24,4 +24,4 @@ My guidelines are, again, under the assumption that the user is using an Apple m
 - Enter the following command as written: "docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro hjosterhoudt/cs1660-project-option-2"
 
 ## Code Walkthrough with Demonstration of Applications
-The link to the video (hosted on OneDrive) can be found [here.](https://pitt-my.sharepoint.com/:v:/g/personal/hjo6_pitt_edu/EVUjH0GqBBFLosVXmDev4ioB00D8psLpQ9LPkfKg9-to9g?e=xZfkEc) Demonstration begins at time 28:20.
+The link to the video (hosted on OneDrive) can be found [here.](https://pitt-my.sharepoint.com/:v:/g/personal/hjo6_pitt_edu/EVUjH0GqBBFLosVXmDev4ioB00D8psLpQ9LPkfKg9-to9g?e=xZfkEc) Demonstration begins at time 28:20. The video audio kind of cuts a bit of the intro off, but all the relevant information is still in tact.
