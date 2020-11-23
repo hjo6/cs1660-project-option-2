@@ -38,6 +38,7 @@ My guidelines are, again, under the assumption that the user is using an Apple m
 - The "new" window will have 2 search fields and 2 buttons, with a large display underneath.
     - The first search field has a label that says "Search for a term." Enter a term in the field and press submit; the program will build a job request and send the search term to the GCP cluster to search through the inverted indices.
     - The second search field has a label that says "Top N Results." Enter a **number** into the field and press submit; the program will build a job request and send the number to the GCP cluster to determine the Top N Results.
+    - **For both functions**, the results will be displayed in the text area beneath the text fields and submission buttons.
 
 ## Code Walkthrough with Demonstration of Applications
 The link to the video (hosted on OneDrive) can be found [here.](https://pitt-my.sharepoint.com/:v:/g/personal/hjo6_pitt_edu/EVUjH0GqBBFLosVXmDev4ioB00D8psLpQ9LPkfKg9-to9g?e=xZfkEc) Demonstration begins at timestamp 28:20. The video audio kind of cuts a bit of the intro off, but all the relevant information is still in tact. At timestamp 32:15, I had received a violation from Google and my project was temporarily taken down. I'm not sure whether this means my project/cluster will be accessible, but I wanted to make the reader aware of this possible issue.
