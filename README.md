@@ -1,0 +1,27 @@
+# CS 1660 Project: Option 2, Hunter Osterhoudt
+Hello and welcome to my repository for the project option 2 in CS 1660 Intro to Cloud Computing Fall Semester 2020. As the title suggests, I went for the second option for this project.
+
+## Repository Directory
+In this repo, there are four folders containing very important files! 
+
+- inverted-index contains my files for the inverted-index implementation (Driver.java, InvertedIndexMapper.java, and InvertedIndexReducer.java), as well as the class files and a JAR.
+- search contains my files for the search function implementation using Hadoop MapReduce (Driver.java, SearchMapper.java, and SearchReducer.java), as well as the class files and a JAR.
+- top-N contains my files for the topN implementation (Driver.java, TopNMapper.java, and TopNReducer.java), as well as the class files and a JAR.
+- projectGUI contains the files that are relevant to the Docker deployed GUI part of the project. In this folder, you can find the Dockerfile used to build my Docker image, the Java file for my GUI (projectUI.java), the JAR to run my GUI on Docker (projectUIwithDependencies.jar), and a guide to run my program (guide.txt).
+
+## How to Run On Docker
+### Assumptions
+- I'm running on a Macbook Pro, so I'm not entirely sure if the run command will be different between machines.
+- Docker is installed and running on the machine.
+- I'm using XQuartz to enable the GUI support on my machine; for Windows, it's assumed the user is using Xming and has it set up properly.
+- The user knows their IP address.
+
+### How to Run
+My guidelines are, again, under the assumption that the user is using an Apple machine. However, the steps should remain the same, if my understanding is correct.
+- Have XQuartz or Xming running on the machine you plan to run the Docker image on
+- Enter the following command, using your IP address in place of the brackets: "export DISPLAY=[IP Address]"
+- Enter the following command as written: "xhost + ${hostname}"
+- Enter the following command as written: "docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro hjosterhoudt/cs1660-project-option-2"
+
+## Code Walkthrough with Demonstration of Applications
+The link to the video (hosted on OneDrive) can be found [here.](https://pitt-my.sharepoint.com/:v:/g/personal/hjo6_pitt_edu/EVUjH0GqBBFLosVXmDev4ioB00D8psLpQ9LPkfKg9-to9g?e=xZfkEc) Demonstration begins at time 28:20.
