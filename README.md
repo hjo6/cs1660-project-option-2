@@ -12,13 +12,15 @@ In this repo, there are four folders containing very important files!
 ## How to Run On Docker
 ### Assumptions
 - I'm running on a Macbook Pro, so I'm not entirely sure if the run command will be different between machines.
+- The user is pulling from this GitHub repository to obtain the proper files to build and run the image.
 - Docker is installed and running on the machine.
 - I'm using XQuartz to enable the GUI support on my machine; for Windows, it's assumed the user is using Xming and has it set up properly.
 - The user knows their IP address.
 
 ### How to Run
 My guidelines are, again, under the assumption that the user is using an Apple machine. However, the steps should remain the same, if my understanding is correct.
-- Have XQuartz or Xming running on the machine you plan to run the Docker image on
+- Have a terminal that can run the image open (XQuartz for Mac, Xming for Windows)
+- Ensure that if you pulled the entire GitHub repository, you are located inside of the "projectGUI" folder
 - Enter the following command, using your IP address in place of the brackets: "export DISPLAY=[IP Address]"
 - Enter the following command as written: "xhost + ${hostname}"
 - Enter the following command as written: "docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro hjosterhoudt/cs1660-project-option-2"
