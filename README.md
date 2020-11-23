@@ -26,6 +26,7 @@ My guidelines are, again, under the assumption that the user is using an Apple m
 - Ensure that if you pulled the entire GitHub repository, you are located inside of the "projectGUI" folder
 - Enter the following command, using your IP address in place of the brackets: "export DISPLAY=[IP Address]:0" (**for Windows**, try using "set-variable -name DISPLAY -value [IP address]:0.0". If the tutorial provided on Xming is correct, you can skip the next step)
 - Enter the following command as written: "xhost + ${hostname}" (**Windows users** can likely skip this step [explanation given in above bullet point])
+- Again, ensure you are in the proper directory to run the image. Enter the following command, as written, to build the image: "docker build --tag cs1660-project-option-2 ."
 - Enter the following command as written: "docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro hjosterhoudt/cs1660-project-option-2"
 
 ## Code Walkthrough with Demonstration of Applications
